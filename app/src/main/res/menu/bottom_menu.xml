@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/AFragment"
+        android:icon="@drawable/ic_fa"
+        android:title="FA" />
+    <item
+        android:id="@id/BFragment"
+        android:icon="@drawable/ic_fb"
+        android:title="FB" />
+
+    <item
+        android:id="@id/CFragment"
+        android:icon="@drawable/ic_fc"
+        android:title="FC" />
+</menu>

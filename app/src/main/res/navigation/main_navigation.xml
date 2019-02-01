@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main_navigation"
+            app:startDestination="@id/AFragment">
+
+    <fragment android:id="@+id/AFragment"
+              android:name="br.com.alex.navigationpost.AFragment"
+              android:label="AFragment"
+              tools:layout="@layout/fragment_a">
+
+        <argument android:name="testeValue"
+                  app:argType="integer"/>
+
+        <action android:id="@+id/action_AFragment_to_internalFragment2"
+                app:destination="@id/internalFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim">
+
+            <argument android:name="testeValue"
+                      app:argType="integer"
+                      android:defaultValue="0"/>
+
+        </action>
+
+
+    </fragment>
+
+    <fragment android:id="@+id/BFragment"
+              android:name="br.com.alex.navigationpost.BFragment"
+              android:label="BFragment"
+              tools:layout="@layout/fragment_b"/>
+
+    <fragment android:id="@+id/CFragment"
+              android:name="br.com.alex.navigationpost.CFragment"
+              android:label="CFragment"
+              tools:layout="@layout/fragment_c"/>
+
+    <fragment android:id="@+id/internalFragment"
+              android:name="br.com.alex.navigationpost.InternalFragment"
+              android:label="InternalFragment"
+              tools:layout="@layout/fragment_internal"/>
+
+</navigation>
