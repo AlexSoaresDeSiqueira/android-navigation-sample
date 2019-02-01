@@ -14,7 +14,7 @@
                   app:argType="integer"/>
 
         <action android:id="@+id/action_AFragment_to_internalFragment2"
-                app:destination="@id/internalFragment"
+                app:destination="@id/nestedGraph"
                 app:enterAnim="@anim/nav_default_enter_anim"
                 app:exitAnim="@anim/nav_default_exit_anim"
                 app:popEnterAnim="@anim/nav_default_pop_enter_anim"
@@ -25,7 +25,6 @@
                       android:defaultValue="0"/>
 
         </action>
-
 
     </fragment>
 
@@ -39,9 +38,6 @@
               android:label="CFragment"
               tools:layout="@layout/fragment_c"/>
 
-    <fragment android:id="@+id/internalFragment"
-              android:name="br.com.alex.navigationpost.InternalFragment"
-              android:label="InternalFragment"
-              tools:layout="@layout/fragment_internal"/>
+    <include app:graph="@navigation/internal_graph" />
 
 </navigation>
